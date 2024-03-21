@@ -1,1 +1,32 @@
-/* здесь используйте глобальные переменные */
+/* Base Colors */
+
+$baseWhite: #ffffff;
+$baseGrey: #bdbdbd;
+$baseBlack: #333333;
+$basePrimary: #7859cf;
+$baseSecondary: #f0ebff;
+
+/* Alt Colors */
+
+$primaryOpacity: rgba (120, 89, 207, 0.25);
+$primaryLighter: #9070ec;
+$primaryDarker: #593cac;
+$lightGrey: #e2e2e2;
+
+/* Background colors */
+
+$lighestGrey: #f8f8f8;
+$flatWhite: #f3ebe1;
+$lavenderLatte: #eae6fc;
+$espresso: #e5e6e8;
+
+/* Breakpoints */
+
+$mobileWidth: 320px;
+$tabletWidth: 768px;
+$desktopWidth: 1440px;
+
+/* Settings */
+
+$mobileTabletPadding: 20px;
+$desktopPadding: 40px;

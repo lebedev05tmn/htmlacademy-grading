@@ -1,0 +1,85 @@
+@import "../../global/variables.scss";
+
+.user {
+  margin-left: 88px;
+  height: 100%;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__item {
+    height: 100%;
+    width: 60px;
+    &:active {
+      background-color: $baseSecondary;
+    }
+
+    @media (min-width: $desktopWidth) {
+      width: auto;
+    }
+  }
+
+  &__link {
+    color: $baseBlack;
+    visibility: hidden;
+    height: 100%;
+
+    &--login,
+    &--union {
+      &::before {
+        height: 100%;
+        width: 60px;
+        visibility: visible;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (min-width: $desktopWidth) {
+          width: 16px;
+          margin-right: 8px;
+          display: block;
+        }
+      }
+    }
+
+    &--login::before {
+      content: url("../../../images/icons/user.svg");
+    }
+
+    &--union::before {
+      content: url("../../../images/icons/union.svg");
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      &::before {
+        content: url("../../../images/icons/union-hover.svg");
+      }
+    }
+
+    &--login:hover,
+    &--login:focus,
+    &--login:active {
+      &::before {
+        content: url("../../../images/icons/user-hover.svg");
+      }
+    }
+
+    @media (min-width: $desktopWidth) {
+      visibility: visible;
+      display: flex;
+      padding: 32px 20px;
+
+      &:hover,
+      &:focus {
+        color: $basePrimary;
+      }
+    }
+  }
+}

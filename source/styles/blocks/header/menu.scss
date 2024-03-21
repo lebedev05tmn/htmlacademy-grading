@@ -1,0 +1,45 @@
+@import "../../global/variables.scss";
+
+.menu {
+  &__list {
+    display: none;
+    @media (min-width: $tabletWidth) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__link {
+    color: $baseBlack;
+    width: 100%;
+    padding: 32px 20px;
+    &--active {
+      @media (min-width: $tabletWidth) {
+        color: $basePrimary;
+        padding-bottom: 30px;
+        border-bottom: 2px solid $basePrimary;
+      }
+    }
+    @media (min-width: $tabletWidth) {
+      &:hover,
+      &:focus {
+        color: $basePrimary;
+      }
+      &:active {
+        color: $basePrimary;
+        background-color: $baseSecondary;
+      }
+    }
+  }
+  &__burger {
+    background: none;
+    border: none;
+    width: 60px;
+    height: 60px;
+    &:active {
+      background-color: $baseSecondary;
+    }
+    @media (min-width: $tabletWidth) {
+      display: none;
+    }
+  }
+}

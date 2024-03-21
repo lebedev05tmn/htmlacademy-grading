@@ -1,0 +1,50 @@
+@import "./variables.scss";
+
+@mixin blockPadding {
+  padding: 0 $mobileTabletPadding;
+  @media (min-width: $tabletWidth) {
+    padding: 0 $desktopPadding;
+  }
+}
+
+@mixin titleH1 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: $baseBlack;
+  @media (min-width: $tabletWidth) {
+    font-size: 56px;
+    line-height: 80px;
+  }
+  @media (min-width: $desktopWidth) {
+    text-align: left;
+  }
+}
+
+@mixin titleH2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  color: $baseBlack;
+  @media (min-width: $tabletWidth) {
+    font-size: 42px;
+    line-height: 64px;
+  }
+}
+
+@mixin text {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: $baseBlack;
+  @media (min-width: $tabletWidth) {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  @media (min-width: $desktopWidth) {
+    text-align: left;
+  }
+}

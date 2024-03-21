@@ -1,1 +1,26 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
+@import "./variables.scss";
+
+*,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat";
+  font-weight: 400;
+  color: $baseBlack;
+  background-color: $baseWhite;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

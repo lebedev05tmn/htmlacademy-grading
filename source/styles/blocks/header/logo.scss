@@ -1,0 +1,18 @@
+@import "../../global/variables.scss";
+
+.logo {
+  display: flex;
+  &__text {
+    display: none;
+    @media (min-width: $desktopWidth) {
+      display: inline-block;
+      width: 126px;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+      text-align: left;
+      color: $baseBlack;
+      margin-left: 20px;
+    }
+  }
+}

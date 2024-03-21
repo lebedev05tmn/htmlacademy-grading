@@ -4,4 +4,7 @@
 @import "./global/fonts.scss";
 
 /* BLOCKS */
-@import "./blocks/header.scss";
+@import "./blocks/header/header.scss";
+@import "./blocks/header/logo.scss";
+@import "./blocks/header/menu.scss";
+@import "./blocks/header/user.scss";
