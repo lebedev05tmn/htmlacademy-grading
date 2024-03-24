@@ -1,0 +1,44 @@
+@import "../global/mixins.scss";
+@import "../global/variables.scss";
+
+.button {
+  @include button;
+  color: $baseWhite;
+  background-color: $basePrimary;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    background-color: $primaryLighter;
+  }
+
+  &:active {
+    background-color: $primaryDarker;
+  }
+
+  &:disabled {
+    background-color: $baseGrey;
+  }
+}
+
+.button-1 {
+  @include button;
+  background-color: $baseWhite;
+  color: $basePrimary;
+
+  &:hover,
+  &:focus {
+    background-color: $primaryLighter;
+    color: $baseWhite;
+  }
+
+  &:active {
+    background-color: $primaryDarker;
+    color: $baseWhite;
+  }
+
+  &:disabled {
+    background-color: $lightGrey;
+    color: $baseWhite;
+  }
+}

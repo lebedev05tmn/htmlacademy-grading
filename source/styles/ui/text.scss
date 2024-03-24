@@ -1,0 +1,21 @@
+@import "../global/mixins.scss";
+
+.text {
+  @include text;
+}
+
+.sub-text {
+  @include subText;
+}
+
+.label {
+  @include text;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+
+.label-hidden {
+  color: $baseGrey;
+}

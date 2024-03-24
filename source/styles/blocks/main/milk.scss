@@ -1,0 +1,40 @@
+@import "../../global/variables.scss";
+
+.milk {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__label {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &__label::before {
+    content: "";
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid $baseGrey;
+    background-color: $baseWhite;
+  }
+
+  input:checked + &__label::before {
+    content: "";
+    position: relative;
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 3px solid $baseWhite;
+    outline: 3px solid $basePrimary;
+    background-color: $basePrimary;
+  }
+
+  & input {
+    display: none;
+  }
+}

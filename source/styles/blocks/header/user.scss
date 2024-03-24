@@ -1,8 +1,12 @@
 @import "../../global/variables.scss";
 
 .user {
-  margin-left: 88px;
+  margin-left: auto;
   height: 100%;
+
+  @media screen and (min-width: $tabletWidth) {
+    margin: 0;
+  }
 
   &__list {
     display: flex;
@@ -14,11 +18,12 @@
   &__item {
     height: 100%;
     width: 60px;
+
     &:active {
       background-color: $baseSecondary;
     }
 
-    @media (min-width: $desktopWidth) {
+    @media screen and (min-width: $desktopWidth) {
       width: auto;
     }
   }
@@ -30,6 +35,8 @@
 
     &--login,
     &--union {
+      position: relative;
+
       &::before {
         height: 100%;
         width: 60px;
@@ -39,7 +46,7 @@
         justify-content: center;
         align-items: center;
 
-        @media (min-width: $desktopWidth) {
+        @media screen and (min-width: $desktopWidth) {
           width: 16px;
           margin-right: 8px;
           display: block;
@@ -49,10 +56,36 @@
 
     &--login::before {
       content: url("../../../images/icons/user.svg");
+      display: block;
+      height: 100%;
+      width: 16px;
+      margin: 22px 0 0 22px;
+
+      @media screen and (min-width: $tabletWidth) {
+        margin-top: 50%;
+      }
+
+      @media screen and (min-width: $desktopWidth) {
+        margin: 0;
+        margin-right: 8px;
+      }
     }
 
     &--union::before {
       content: url("../../../images/icons/union.svg");
+      display: block;
+      width: 16px;
+      height: 16px;
+      margin: 22px 0 0 22px;
+
+      @media screen and (min-width: $tabletWidth) {
+        margin-top: 50%;
+      }
+
+      @media screen and (min-width: $desktopWidth) {
+        margin: 0;
+        margin-right: 8px;
+      }
     }
 
     &:hover,
@@ -60,6 +93,8 @@
     &:active {
       &::before {
         content: url("../../../images/icons/union-hover.svg");
+        width: 16px;
+        height: 16px;
       }
     }
 
@@ -68,10 +103,12 @@
     &--login:active {
       &::before {
         content: url("../../../images/icons/user-hover.svg");
+        width: 16px;
+        height: 16px;
       }
     }
 
-    @media (min-width: $desktopWidth) {
+    @media screen and (min-width: $desktopWidth) {
       visibility: visible;
       display: flex;
       padding: 32px 20px;

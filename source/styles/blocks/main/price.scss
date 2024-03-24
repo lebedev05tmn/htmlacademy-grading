@@ -1,0 +1,47 @@
+@import "../../global/variables.scss";
+
+.price {
+  display: flex;
+  gap: 44px;
+  position: relative;
+
+  @media (min-width: $tabletWidth) {
+    gap: 48px;
+  }
+
+  @media (min-width: $desktopWidth) {
+    gap: 50px;
+  }
+
+  &__start {
+    height: 40px;
+    border: 2px solid $basePrimary;
+    border-radius: 4px;
+    text-align: center;
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: $baseBlack;
+  }
+
+  &__end {
+    height: 40px;
+    border: 2px solid $basePrimary;
+    border-radius: 4px;
+    text-align: center;
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: $baseBlack;
+  }
+
+  &__dash {
+    background-color: $baseGrey;
+    width: 8px;
+    height: 2px;
+    margin-top: 5%;
+    right: 50%;
+  }
+}

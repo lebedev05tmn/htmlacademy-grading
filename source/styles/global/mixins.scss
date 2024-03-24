@@ -2,49 +2,117 @@
 
 @mixin blockPadding {
   padding: 0 $mobileTabletPadding;
-  @media (min-width: $tabletWidth) {
+
+  @media screen and (min-width: $tabletWidth) {
     padding: 0 $desktopPadding;
   }
 }
 
 @mixin titleH1 {
+  font-family: "Montserrat", sans-serif;
   font-size: 36px;
   font-weight: 700;
   line-height: 48px;
   letter-spacing: 0.02em;
   text-align: center;
   color: $baseBlack;
-  @media (min-width: $tabletWidth) {
+  margin-bottom: 16px;
+
+  @media screen and (min-width: $tabletWidth) {
     font-size: 56px;
     line-height: 80px;
   }
-  @media (min-width: $desktopWidth) {
+
+  @media screen and (min-width: $desktopWidth) {
     text-align: left;
+    margin-bottom: 10px;
   }
 }
 
 @mixin titleH2 {
+  font-family: "Montserrat", sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 36px;
   text-align: center;
   color: $baseBlack;
-  @media (min-width: $tabletWidth) {
+
+  @media screen and (min-width: $tabletWidth) {
     font-size: 42px;
     line-height: 64px;
   }
 }
 
+@mixin titleH3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: left;
+  color: $baseBlack;
+
+  @media screen and (min-width: $tabletWidth) {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+@mixin titleH4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: $basePrimary;
+}
+
+@mixin label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  color: $baseBlack;
+}
+
 @mixin text {
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   line-height: 20px;
   text-align: center;
   color: $baseBlack;
-  @media (min-width: $tabletWidth) {
+
+  @media screen and (min-width: $tabletWidth) {
     font-size: 20px;
     line-height: 32px;
   }
-  @media (min-width: $desktopWidth) {
+
+  @media screen and (min-width: $desktopWidth) {
     text-align: left;
   }
+}
+
+@mixin subText {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: $basePrimary;
+  text-transform: uppercase;
+  margin: 60px 0 4px;
+}
+
+@mixin button {
+  font-family: "Montserrat", sans-serif;
+  padding: 8px 20px;
+  border-radius: 4px;
+  border: none;
+  background-color: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
 }

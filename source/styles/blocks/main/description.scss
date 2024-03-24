@@ -1,0 +1,27 @@
+@import "../../global/variables.scss";
+@import "../../global/mixins.scss";
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    word-wrap: break-word;
+  }
+
+  &__text {
+    width: 100%;
+    text-align: center;
+
+    @media screen and (min-width: $tabletWidth) {
+      max-width: 608px;
+    }
+
+    @media screen and (min-width: $desktopWidth) {
+      max-width: 625px;
+      text-align: left;
+    }
+  }
+}

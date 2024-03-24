@@ -4,7 +4,29 @@
 @import "./global/fonts.scss";
 
 /* BLOCKS */
+
+/* HEADER */
 @import "./blocks/header/header.scss";
 @import "./blocks/header/logo.scss";
 @import "./blocks/header/menu.scss";
 @import "./blocks/header/user.scss";
+
+/* MAIN */
+
+@import "./blocks/main/description.scss";
+@import "./blocks/main/slider.scss";
+@import "./blocks/main/order.scss";
+@import "./blocks/main/steps.scss";
+@import "./blocks/main/features.scss";
+@import "./blocks/main/catalog.scss";
+@import "./blocks/main/filter.scss";
+@import "./blocks/main/range.scss";
+@import "./blocks/main/price.scss";
+@import "./blocks/main/milk.scss";
+
+/* User Interface */
+
+@import "./ui/title.scss";
+@import "./ui/text.scss";
+@import "./ui/button.scss";
+@import "./ui/none.scss";

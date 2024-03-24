@@ -1,0 +1,15 @@
+@import "../../global/variables.scss";
+@import "../../global/mixins.scss";
+
+.catalog {
+  @include blockPadding;
+  background-color: $lightestGrey;
+
+  &__description {
+    margin-bottom: 20px;
+
+    @media screen and (min-width: $desktopWidth) {
+      margin-bottom: 40px;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import "../../global/variables.scss";
+
+.range {
+  width: 100%;
+  margin-bottom: 30px;
+  @media (min-width: $tabletWidth) {
+    width: 223px;
+    margin-bottom: 0;
+  }
+  @media (min-width: $desktopWidth) {
+    width: 318px;
+    margin-bottom: 30px;
+  }
+  &__select {
+    margin-bottom: 28px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,21 @@
+@import "../global/mixins.scss";
+
+h1.title {
+  @include titleH1;
+}
+
+h2.title {
+  @include titleH2;
+}
+
+h3.title {
+  @include titleH3;
+}
+
+h4.title {
+  @include titleH4;
+}
+
+legend.title {
+  @include label;
+}

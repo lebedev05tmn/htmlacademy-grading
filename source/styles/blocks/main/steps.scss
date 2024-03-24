@@ -1,0 +1,37 @@
+@import "../../global/variables.scss";
+
+.steps {
+  display: none;
+  z-index: 100;
+
+  &__button {
+    border: none;
+    display: block;
+    width: 62px;
+    height: 4px;
+    background-color: $baseWhite;
+
+    &:hover,
+    &:focus {
+      background-color: $basePrimary;
+      opacity: 0.75;
+    }
+
+    &:active {
+      background-color: $basePrimary;
+      opacity: 1;
+    }
+
+    &--active {
+      background-color: $basePrimary;
+    }
+  }
+
+  @media screen and (min-width: $desktopWidth) {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 84px;
+    gap: 8px;
+  }
+}

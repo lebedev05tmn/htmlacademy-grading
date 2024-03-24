@@ -1,0 +1,138 @@
+@import "../../global/variables.scss";
+@import "../../global/mixins.scss";
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  @media screen and (min-width: $tabletWidth) and (max-width: $desktopWidth) {
+    z-index: -2;
+  }
+
+  @media screen and (min-width: $desktopWidth) {
+    flex-direction: row-reverse;
+    padding-bottom: 84px;
+    gap: 30px;
+  }
+
+  &::after {
+    @media screen and (min-width: $tabletWidth) and (max-width: ($desktopWidth - 1px)) {
+      content: "";
+      position: absolute;
+      width: 100vw;
+      height: 188px;
+      bottom: 0;
+      left: 0;
+      background-color: $baseWhite;
+      z-index: -1;
+    }
+
+    @include blockPadding;
+
+    &__image {
+      position: absolute;
+      z-index: 1;
+    }
+  }
+
+  &__description {
+    order: 1;
+
+    @media screen and (min-width: $tabletWidth) {
+      order: 0;
+    }
+
+    @media screen and (min-width: $desktopWidth) {
+      align-items: start;
+    }
+  }
+
+  &__image {
+    order: 0;
+
+    @media screen and (min-width: $tabletWidth) {
+      order: 1;
+    }
+  }
+
+  &__previous-button {
+    width: 80px;
+    background: none;
+    border: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0 5px 0 4px;
+    height: 100%;
+
+    &:hover,
+    &:focus {
+      &:not([disabled]) {
+        background-color: $baseWhite;
+      }
+    }
+
+    &:active {
+      &:not([disabled]) {
+        background-color: linear-gradient(
+          90deg,
+          rgba(120, 89, 207, 0.25) 0%,
+          rgba(120, 89, 207, 0) 100%
+        );
+      }
+    }
+
+    &:disabled svg {
+      fill: $baseGrey;
+    }
+  }
+
+  &__next-button {
+    width: 80px;
+    background: none;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0 4px 0 5px;
+    height: 100%;
+
+    &:hover,
+    &:focus {
+      &:not([disabled]) {
+        background-color: $baseWhite;
+      }
+    }
+
+    &:active {
+      &:not([disabled]) {
+        background-color: linear-gradient(
+          90deg,
+          rgba(120, 89, 207, 0.25) 0%,
+          rgba(120, 89, 207, 0) 100%
+        );
+      }
+    }
+
+    &:disabled {
+      svg {
+        fill: $baseGrey;
+      }
+    }
+  }
+
+  &--default {
+    background-color: $flatWhite;
+  }
+
+  &--latte {
+    background-color: $lavenderLatte;
+  }
+
+  &--espresso {
+    background-color: $espresso;
+  }
+}

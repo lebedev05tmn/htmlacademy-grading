@@ -2,9 +2,11 @@
 
 .logo {
   display: flex;
+
   &__text {
     display: none;
-    @media (min-width: $desktopWidth) {
+
+    @media screen and (min-width: $desktopWidth) {
       display: inline-block;
       width: 126px;
       font-size: 12px;
