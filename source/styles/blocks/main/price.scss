@@ -2,6 +2,7 @@
 
 .price {
   display: flex;
+  justify-content: space-between;
   gap: 44px;
   position: relative;
 
@@ -14,6 +15,11 @@
   }
 
   &__start {
+    box-sizing: border-box;
+    width: 118px;
+    @media screen and (min-width: $tabletWidth) {
+      width: 87px;
+    }
     height: 40px;
     border: 2px solid $basePrimary;
     border-radius: 4px;
@@ -26,6 +32,11 @@
   }
 
   &__end {
+    box-sizing: border-box;
+    width: 118px;
+    @media screen and (min-width: $tabletWidth) {
+      width: 88px;
+    }
     height: 40px;
     border: 2px solid $basePrimary;
     border-radius: 4px;
@@ -38,10 +49,11 @@
   }
 
   &__dash {
+    position: absolute;
     background-color: $baseGrey;
     width: 8px;
     height: 2px;
-    margin-top: 5%;
+    margin-top: 10%;
     right: 50%;
   }
 }

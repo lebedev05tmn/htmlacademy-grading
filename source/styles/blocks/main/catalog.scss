@@ -5,6 +5,9 @@
   @include blockPadding;
   background-color: $lightestGrey;
 
+  display: flex;
+  flex-direction: column;
+
   &__description {
     margin-bottom: 20px;
 

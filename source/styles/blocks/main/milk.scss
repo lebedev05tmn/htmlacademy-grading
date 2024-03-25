@@ -3,7 +3,15 @@
 .milk {
   display: flex;
   flex-direction: column;
+  width: 100%;
   gap: 20px;
+  margin-bottom: 34px;
+  @media screen and (min-width: $tabletWidth) {
+    margin-bottom: 0;
+  }
+  @media screen and (min-width: $desktopWidth) {
+    margin-bottom: 30px;
+  }
 
   &__label {
     display: flex;
@@ -12,25 +20,41 @@
   }
 
   &__label::before {
+    box-sizing: border-box;
     content: "";
     position: relative;
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     border: 2px solid $baseGrey;
     background-color: $baseWhite;
   }
 
-  input:checked + &__label::before {
+  input[type="radio"]:disabled + &__label::before {
+    box-sizing: border-box;
     content: "";
     position: relative;
     display: block;
-    width: 18px;
-    height: 18px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
-    border: 3px solid $baseWhite;
-    outline: 3px solid $basePrimary;
+    border: 2px solid $lightGrey;
+    background-color: $baseWhite;
+  }
+
+  input[type="radio"]:checked + &__label::before {
+    content: "";
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+    border-radius: 50%;
+    outline: 2px solid $basePrimary;
+    border: 2px solid $baseWhite;
+
     background-color: $basePrimary;
   }
 

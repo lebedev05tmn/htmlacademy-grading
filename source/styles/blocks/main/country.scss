@@ -1,0 +1,88 @@
+@import "../../global/variables.scss";
+@import "../../global/mixins.scss";
+
+.country {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__input-block {
+    display: flex;
+  }
+
+  & input[type="checkbox"] {
+    display: none;
+  }
+
+  &__label {
+    position: relative;
+    display: flex;
+    gap: 10px;
+  }
+
+  &__label::before {
+    content: "";
+    position: relative;
+    left: 0;
+    display: block;
+    width: 42px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: $baseGrey;
+  }
+
+  input[type="checkbox"]:disabled + &__label::before {
+    content: "";
+    position: relative;
+    left: 0;
+    display: block;
+    width: 42px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: $lightGrey;
+  }
+
+  &__label::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: $baseWhite;
+    border-radius: 50%;
+    top: 7.5%;
+    left: 2px;
+  }
+
+  input[type="checkbox"]:disabled + &__label::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: $lightestGrey;
+    border-radius: 50%;
+    top: 7.5%;
+    left: 2px;
+  }
+
+  input[type="checkbox"]:checked + &__label::before {
+    content: "";
+    position: relative;
+    left: 0;
+    display: block;
+    width: 42px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: $basePrimary;
+  }
+
+  input[type="checkbox"]:checked + &__label::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: $baseWhite;
+    border-radius: 50%;
+    top: 7.5%;
+    left: 20px;
+  }
+}

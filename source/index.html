@@ -76,7 +76,7 @@
         <div class="slider__description description">
           <span class="description__sub-text sub-text">Новинка</span>
           <h1 class="description__title title">Декаф Флэт Уайт</h1>
-          <p class="description__text">
+          <p class="description__text text">
             Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским
             молоком — то, что нужно для расслабления после тяжёлого рабочего дня
           </p>
@@ -158,7 +158,7 @@
         <div class="slider__description description">
           <span class="description__sub-text sub-text">Новинка</span>
           <h1 class="description__title title">Лавандовый Латте</h1>
-          <p class="description__text">
+          <p class="description__text text">
             Невероятное сочетание перуанской высокогорной арабики с молоком ламы
             и лавандовым сиропом унесёт вас прямо на вершину Радужных гор
           </p>
@@ -240,7 +240,7 @@
         <div class="slider__description description">
           <span class="description__sub-text sub-text">Новинка</span>
           <h1 class="description__title title">Тройной Эспрессо</h1>
-          <p class="description__text">
+          <p class="description__text text">
             Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной
             эспрессо из Колумбии покажет вам, что такое настоящая бодрость
           </p>
@@ -397,13 +397,28 @@
           <div class="filter__wrapper">
             <fieldset class="filter__range range">
               <legend class="range__title title">Цена</legend>
-              <input
-                class="range__select"
-                type="range"
-                id="form-range"
-                name="price-range"
-                value="90"
-              />
+              <div class="range__select">
+                <input
+                  class="range__select"
+                  type="range"
+                  id="form-range-start"
+                  name="price-range"
+                  value="0"
+                  min="0"
+                  max="100"
+                  step="1"
+                />
+                <input
+                  class="range__select"
+                  type="range"
+                  id="form-range-end"
+                  name="price-range"
+                  value="90"
+                  min="00"
+                  max="100"
+                  step="1"
+                />
+              </div>
               <div class="range__price price">
                 <input
                   class="price__start"
@@ -453,34 +468,61 @@
             </fieldset>
             <fieldset class="filter__country country">
               <legend class="country__title title">Страна произрастания</legend>
-              <input type="checkbox" name="form-checkbox-country" id="brasil" />
-              <label class="country__label label" for="brasil">Бразилия</label>
-              <input
-                type="checkbox"
-                name="form-checkbox-country"
-                id="ethiopia"
-              />
-              <label class="country__label label" for="ethiopia">Эфиопия</label>
-              <input
-                type="checkbox"
-                name="form-checkbox-country"
-                id="columbia"
-              />
-              <label class="country__label label" for="columbia"
-                >Колумбия</label
-              >
-              <input
-                type="checkbox"
-                name="form-checkbox-country"
-                id="costa-rica"
-              />
-              <label class="country__label label" for="costa-rica"
-                >Коста-Рика</label
-              >
-              <input type="checkbox" name="form-checkbox-country" id="peru" />
-              <label class="country__label label label-hidden" for="peru"
-                >Перу</label
-              >
+              <div class="country__input-block">
+                <input
+                  type="checkbox"
+                  name="form-checkbox-country"
+                  id="brasil"
+                  checked
+                />
+                <label class="country__label label" for="brasil"
+                  >Бразилия</label
+                >
+              </div>
+
+              <div class="country__input-block">
+                <input
+                  type="checkbox"
+                  name="form-checkbox-country"
+                  id="ethiopia"
+                />
+                <label class="country__label label" for="ethiopia"
+                  >Эфиопия</label
+                >
+              </div>
+              <div class="country__input-block">
+                <input
+                  type="checkbox"
+                  name="form-checkbox-country"
+                  id="columbia"
+                />
+
+                <label class="country__label label" for="columbia"
+                  >Колумбия</label
+                >
+              </div>
+              <div class="country__input-block">
+                <input
+                  type="checkbox"
+                  name="form-checkbox-country"
+                  id="costa-rica"
+                />
+
+                <label class="country__label label" for="costa-rica"
+                  >Коста-Рика</label
+                >
+              </div>
+              <div class="country__input-block">
+                <input
+                  type="checkbox"
+                  name="form-checkbox-country"
+                  id="peru"
+                  disabled
+                />
+                <label class="country__label label label-hidden" for="peru"
+                  >Перу</label
+                >
+              </div>
             </fieldset>
           </div>
           <div class="filter__buttons">

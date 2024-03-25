@@ -3,7 +3,7 @@
 @mixin blockPadding {
   padding: 0 $mobileTabletPadding;
 
-  @media screen and (min-width: $tabletWidth) {
+  @media screen and (min-width: $desktopWidth) {
     padding: 0 $desktopPadding;
   }
 }
@@ -115,4 +115,21 @@
   font-weight: 400;
   line-height: 24px;
   text-align: center;
+}
+
+@mixin thumb {
+  width: 24px;
+  height: 24px;
+  border: $basePrimary 2px solid;
+  background-color: $baseWhite;
+  pointer-events: auto;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+/* https://codepen.io/rendykstan/pen/VLqZGO8 */
+
+@mixin range-slider {
 }
