@@ -1,0 +1,12 @@
+@import "../../global/variables.scss";
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  width: 318px;
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+  }
+}

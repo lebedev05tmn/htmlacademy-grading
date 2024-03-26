@@ -1,0 +1,9 @@
+@import "../../global/variables.scss";
+@import "../../global/mixins.scss";
+
+.footer {
+  @include blockPadding;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}

@@ -5,8 +5,16 @@
   @include blockPadding;
   background-color: $lightestGrey;
 
-  display: flex;
-  flex-direction: column;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $desktopWidth) {
+      display: grid;
+      grid-template-columns: 318px 1fr;
+      gap: 30px;
+    }
+  }
 
   &__description {
     margin-bottom: 20px;

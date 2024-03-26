@@ -1,0 +1,26 @@
+@import "../../global/variables.scss";
+@import "../../global/mixins.scss";
+
+.sort {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: $tabletWidth) {
+    margin-bottom: 26px;
+    justify-content: flex-end;
+  }
+
+  @media screen and (min-width: $desktopWidth) {
+    margin-bottom: 30px;
+  }
+
+  &__select {
+    border: none;
+    background-color: transparent;
+    @include label;
+    color: $basePrimary;
+  }
+}

@@ -1,0 +1,21 @@
+@import "../../global/variables.scss";
+
+.cards-list {
+  display: flex;
+  flex-direction: column;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @media screen and (min-width: $tabletWidth) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    @media screen and (min-width: $desktopWidth) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

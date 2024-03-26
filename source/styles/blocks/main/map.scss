@@ -1,0 +1,14 @@
+@import "../../global/variables.scss";
+
+.location-map {
+  width: 100vw;
+  height: 420px;
+
+  @media screen and (min-width: $tabletWidth) {
+    height: 480px;
+  }
+
+  @media screen and (min-width: $desktopWidth) {
+    height: 480px;
+  }
+}
