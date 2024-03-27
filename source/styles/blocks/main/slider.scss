@@ -71,18 +71,16 @@
     &:hover,
     &:focus {
       &:not([disabled]) {
-        background-color: $baseWhite;
+        background: $baseWhite;
       }
     }
 
     &:active {
-      &:not([disabled]) {
-        background-color: linear-gradient(
-          90deg,
-          rgba(120, 89, 207, 0.25) 0%,
-          rgba(120, 89, 207, 0) 100%
-        );
-      }
+      background: linear-gradient(
+        90deg,
+        rgba(120, 89, 207, 0.25) 0%,
+        rgba(120, 89, 207, 0) 100%
+      );
     }
 
     &:disabled svg {
@@ -108,13 +106,11 @@
     }
 
     &:active {
-      &:not([disabled]) {
-        background-color: linear-gradient(
-          90deg,
-          rgba(120, 89, 207, 0.25) 0%,
-          rgba(120, 89, 207, 0) 100%
-        );
-      }
+      background: linear-gradient(
+        90deg,
+        rgba(120, 89, 207, 0.25) 0%,
+        rgba(120, 89, 207, 0) 100%
+      );
     }
 
     &:disabled {

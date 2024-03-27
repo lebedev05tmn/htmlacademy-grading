@@ -6,9 +6,11 @@
   width: 100%;
   gap: 20px;
   margin-bottom: 34px;
+
   @media screen and (min-width: $tabletWidth) {
     margin-bottom: 0;
   }
+
   @media screen and (min-width: $desktopWidth) {
     margin-bottom: 30px;
   }

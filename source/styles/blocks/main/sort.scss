@@ -18,9 +18,9 @@
   }
 
   &__select {
+    @include label;
     border: none;
     background-color: transparent;
-    @include label;
     color: $basePrimary;
   }
 }

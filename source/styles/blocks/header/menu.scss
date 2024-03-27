@@ -10,7 +10,27 @@
     }
   }
 
+  &__burger-list {
+    position: absolute;
+    z-index: 10000;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: $baseWhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__burger-list &__item {
+    padding: 20px 0;
+    border-top: 1px solid $baseSecondary;
+    width: 100%;
+    text-align: center;
+  }
+
   &__link {
+    text-transform: uppercase;
     color: $baseBlack;
     width: 100%;
     padding: 32px 20px;
@@ -48,6 +68,18 @@
 
     @media screen and (min-width: $tabletWidth) {
       display: none;
+    }
+  }
+
+  &__close {
+    display: none;
+    background: none;
+    border: none;
+    width: 60px;
+    height: 60px;
+
+    &:active {
+      background-color: $baseSecondary;
     }
   }
 }

@@ -24,6 +24,7 @@
     @media screen and (min-width: $desktopWidth) {
       margin-bottom: 46px;
     }
+
     margin-top: 6px;
     width: 100%;
     display: block;
@@ -38,37 +39,45 @@
       width: 100%;
       height: 4px;
       background-color: $basePrimary;
+
       &:focus,
       &:active {
         outline: none;
       }
+
       &::-webkit-slider-thumb {
         -webkit-appearance: none;
         box-sizing: content-box;
         @include thumb;
       }
+
       &::-moz-range-thumb {
         @include thumb;
       }
+
       &::-ms-thumb {
         @include thumb;
       }
+
       &::-moz-range-track {
         -moz-appearance: none;
         background-color: none;
       }
+
       &::-ms-track {
         border-color: transparent;
         color: transparent;
         background: transparent;
-        /* again your track styles */
       }
+
       &::-ms-fill-upper {
         background: transparent;
       }
+
       &::-ms-fill-lower {
         background: transparent;
       }
+
       &::-ms-tooltip {
         display: none;
       }

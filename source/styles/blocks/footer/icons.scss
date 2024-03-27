@@ -1,12 +1,55 @@
 @import "../../global/variables.scss";
+@import "../../global/mixins.scss";
 
 .icons {
+  @include blockPadding;
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $baseSecondary;
   display: flex;
-  flex-direction: column;
-  width: 318px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (min-width: $tabletWidth) {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    border: none;
+  }
+
+  @media screen and (min-width: $desktopWidth) {
+    flex-direction: column;
+    gap: 50px;
+    padding-bottom: 101px;
+    justify-content: flex-start;
+    align-items: start;
+  }
 
   &__logo {
     display: flex;
     flex-direction: column;
+  }
+
+  &__list {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__item {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__link svg:focus,
+  &__link svg:hover {
+    opacity: 0.6;
+  }
+
+  &__link svg:active {
+    fill: $basePrimary;
   }
 }

@@ -1,15 +1,18 @@
 import "./slider";
+import "./map";
 
-const map = L.map("map").setView([59.968322, 30.317359], 16);
-L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  maxZoom: 19,
-  attribution:
-    '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-}).addTo(map);
+const burgerButton = document.querySelector(".menu__burger");
+const closeButton = document.querySelector(".menu__close");
+const burgerList = document.querySelector(".menu__burger-list");
 
-const icon = L.icon({
-  iconUrl: "../images/icons/pin.svg",
-  iconSize: [38, 50],
+burgerButton.addEventListener("click", () => {
+  burgerList.style.display = "flex";
+  burgerButton.style.display = "none";
+  closeButton.style.display = "block";
 });
 
-const marker = L.marker([59.968322, 30.317359], { icon }).addTo(map);
+closeButton.addEventListener("click", () => {
+  burgerList.style.display = "none";
+  closeButton.style.display = "none";
+  burgerButton.style.display = "block";
+});

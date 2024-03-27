@@ -2,8 +2,11 @@
 @import "../../global/mixins.scss";
 
 .footer {
-  @include blockPadding;
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
+
+  @media screen and (min-width: $desktopWidth) {
+    flex-direction: row;
+  }
 }

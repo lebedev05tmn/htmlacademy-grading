@@ -1,6 +1,82 @@
 @import "../../global/variables.scss";
+@import "../../global/mixins.scss";
 
 .links {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  margin-bottom: 66px;
+
+  @media screen and (min-width: $tabletWidth) {
+    @include blockPadding;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 86px;
+  }
+
+  @media screen and (min-width: $desktopWidth) {
+    margin-top: 29px;
+    margin-bottom: 20px;
+    justify-content: flex-start;
+    gap: 30px;
+  }
+
+  &__box {
+    @include blockPadding;
+    box-sizing: border-box;
+    width: 100%;
+    border-bottom: 1px solid $baseSecondary;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 4px;
+
+    @media screen and (min-width: $tabletWidth) {
+      padding: 20px 0;
+      border: none;
+    }
+  }
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__item {
+    padding: 8px 0;
+  }
+
+  &__ref {
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: $baseBlack;
+  }
+
+  &__ref--address {
+    display: flex;
+    gap: 6px;
+  }
+
+  &__ref--address::before {
+    content: url("../../../images/icons/address.svg");
+    display: block;
+    width: 13px;
+    height: 16px;
+  }
+
+  &__ref--phone {
+    display: flex;
+    gap: 6px;
+  }
+
+  &__ref--phone::before {
+    content: url("../../../images/icons/phone.svg");
+    display: block;
+    width: 13px;
+    height: 16px;
+  }
 }
