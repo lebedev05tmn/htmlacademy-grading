@@ -1,0 +1,1 @@
+var o=L.map("map",{zoomControl:!1,attributionControl:!1}).setView([59.968322,30.317359],16);L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19}).addTo(o);var t=L.icon({iconUrl:"../images/icons/pin.svg",iconSize:[38,50]}),a=L.marker([59.968322,30.317359],{icon:t}).addTo(o);
